@@ -3,21 +3,21 @@ import React from 'react'
 
 import ErrorFallback from './ErrorFallback'
 
-it('ErrorFallback should display error header', () => {
+test('ErrorFallback should display error header', () => {
 	const error = new Error('test error')
 	render(<ErrorFallback error={error} />)
 	const header = screen.getByText('Error Header')
 	expect(header).toBeDefined()
 })
 
-it('ErrorFallback should display error description', () => {
+test('ErrorFallback should display error description', () => {
 	const error = new Error('test error')
 	render(<ErrorFallback error={error} />)
 	const description = screen.getByText('Error description')
 	expect(description).toBeDefined()
 })
 
-it('ErrorFallback should display error message', () => {
+test('ErrorFallback should display error message', () => {
 	const error = new Error('test error')
 	render(<ErrorFallback error={error} />)
 	const givenError = screen.getByText(error.message)

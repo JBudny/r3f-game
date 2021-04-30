@@ -3,16 +3,13 @@ import ReactDOM from 'react-dom'
 import { ErrorBoundary } from 'react-error-boundary'
 
 import App from './App'
-import ErrorFallback from './components/ErrorFallback/ErrorFallback'
 import GlobalStyle from './index.styles'
 import reportWebVitals from './reportWebVitals'
 
 ReactDOM.render(
 	<React.StrictMode>
 		<GlobalStyle />
-		<ErrorBoundary FallbackComponent={ErrorFallback}>
-			<App />
-		</ErrorBoundary>
+		<App />
 	</React.StrictMode>,
 	document.getElementById('root')
 )

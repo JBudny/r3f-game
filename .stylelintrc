@@ -16,7 +16,6 @@
     "function-url-quotes": "always",
     "declaration-no-important": true,
     "declaration-block-semicolon-newline-after": "always",
-    "declaration-block-trailing-semicolon": "never",
     "block-closing-brace-newline-after": "always",
     "block-closing-brace-newline-before": "always",
     "block-opening-brace-newline-before": "never-single-line"

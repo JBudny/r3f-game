@@ -49,7 +49,7 @@
 		"import/no-extraneous-dependencies": [
 			"error",
 			{
-				"devDependencies": ["**/*.stories.tsx"]
+				"devDependencies": ["**/*.stories.tsx", "**/*.test.ts", "**/*.test.tsx", "**/*setupTests.ts"]
 			}
 		],
 		"comma-dangle": ["error", "never"],

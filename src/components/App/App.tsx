@@ -14,7 +14,7 @@ const App: React.FC = () => {
 				}
 			>
 				<color attach="background" args={['#F8F8F8']} />
-				<ambientLight intensity />
+				<ambientLight intensity={1} />
 				<directionalLight castShadow intensity={2} />
 			</Canvas>
 		</ErrorBoundary>

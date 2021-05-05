@@ -1,22 +1,15 @@
 import { useGLTF } from '@react-three/drei'
 import React, { useRef } from 'react'
 import * as THREE from 'three'
-import { GLTF } from 'three/examples/jsm/loaders/GLTFLoader'
 
-type GLTFResult = GLTF & {
-	nodes: {
-		Ground: THREE.Mesh
-	}
-	materials: {
-		GroundMaterial: THREE.MeshStandardMaterial
-	}
-}
+import { GroundGLTFResult, GroundProps } from './Ground.types'
 
 const path = './GLTFModels/Ground.gltf'
 
-const Ground = (props: JSX.IntrinsicElements['group']) => {
+const Ground: React.FC<GroundProps> = ({ color, ...props }: GroundProps) => {
 	const group = useRef<THREE.Group>()
-	const { nodes, materials } = useGLTF(path) as GLTFResult
+	const { nodes, materials } = useGLTF(path) as GroundGLTFResult
+	if (color) materials.GroundMaterial.color.set(color)
 
 	return (
 		<group ref={group} {...props} dispose={null}>

@@ -1,7 +1,8 @@
 import { Meta, Story } from '@storybook/react'
 import React from 'react'
 
-import Ground from '../components/3DModels/Ground'
+import Ground from '../components/3DModels/Ground/Ground'
+import { GroundProps } from '../components/3DModels/Ground/Ground.types'
 import StoryCanvasWrapper from '../utils/StoryCanvasWrapper'
 
 export default {
@@ -9,15 +10,15 @@ export default {
 	component: Ground
 } as Meta
 
-const Template: Story = (args) => {
+const Template: Story<GroundProps> = (args: GroundProps) => {
 	return (
 		<StoryCanvasWrapper>
-			<Ground />
+			<Ground {...args} />
 		</StoryCanvasWrapper>
 	)
 }
 
 export const Default = Template.bind({})
 Default.args = {
-	error: new Error('Error message')
+	color: '#2d190d'
 }

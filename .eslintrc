@@ -57,5 +57,23 @@
 		"react/jsx-props-no-spreading": "off",
 		"react/prop-types": "off",
 		"react/require-default-props": "off"
-	}
+	},
+	"overrides": [
+		{
+			"files": [
+				"**/*.stories.*"
+			],
+			"rules": {
+				"import/no-anonymous-default-export": "off"
+			}
+		},
+		{
+			"files": [
+				"**/*.stories.*"
+			],
+			"rules": {
+				"import/no-anonymous-default-export": "off"
+			}
+		}
+	]
 }

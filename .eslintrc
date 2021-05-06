@@ -74,6 +74,12 @@
 			"rules": {
 				"import/no-anonymous-default-export": "off"
 			}
-		}
+		},
+		{
+      "files": ["*.ts", "*.tsx"],
+      "parserOptions": {
+        "project": ["./tsconfig.json"]
+      }
+    }
 	]
 }

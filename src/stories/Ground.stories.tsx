@@ -3,7 +3,7 @@ import React from 'react'
 
 import Ground from '../components/3DModels/Ground/Ground'
 import { GroundProps } from '../components/3DModels/Ground/Ground.types'
-import StoryCanvasWrapper from '../utils/StoryCanvasWrapper'
+import StoryCanvas from '../devUtils/StoryCanvas'
 
 export default {
 	title: 'R3F-Game/3DModels/Ground',
@@ -12,9 +12,9 @@ export default {
 
 const Template: Story<GroundProps> = (args: GroundProps) => {
 	return (
-		<StoryCanvasWrapper>
+		<StoryCanvas>
 			<Ground {...args} />
-		</StoryCanvasWrapper>
+		</StoryCanvas>
 	)
 }
 

@@ -1,8 +1,13 @@
 import { OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
+import { Perf } from 'r3f-perf'
 import React from 'react'
 
-const StoryCanvasWrapper = ({ children }: any) => {
+import { StoryCanvasProps } from './StoryCanvas.types'
+
+const StoryCanvas: React.FC<StoryCanvasProps> = ({
+	children
+}: StoryCanvasProps) => {
 	return (
 		<Canvas
 			camera={{ position: [0, 20, 0] }}
@@ -11,6 +16,7 @@ const StoryCanvasWrapper = ({ children }: any) => {
 				gl.setSize(window.innerWidth, window.innerHeight, true)
 			}
 		>
+			<Perf openByDefault />
 			<OrbitControls />
 			<color attach="background" args={['#F8F8F8']} />
 			<ambientLight intensity={1} />
@@ -20,4 +26,4 @@ const StoryCanvasWrapper = ({ children }: any) => {
 	)
 }
 
-export default StoryCanvasWrapper
+export default StoryCanvas

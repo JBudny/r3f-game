@@ -5,7 +5,10 @@ import * as THREE from 'three'
 import GroundGLTF from '../../../blenderFiles/gltf/Ground/Ground.gltf'
 import { GroundGLTFResult, GroundProps } from './Ground.types'
 
-const Ground: React.FC<GroundProps> = ({ color, ...props }: GroundProps) => {
+export const Ground: React.FC<GroundProps> = ({
+	color,
+	...props
+}: GroundProps) => {
 	const group = useRef<THREE.Group>()
 	const { nodes, materials } = useGLTF(GroundGLTF) as GroundGLTFResult
 	if (color) materials.GroundMaterial.color.set(color)
@@ -24,5 +27,3 @@ const Ground: React.FC<GroundProps> = ({ color, ...props }: GroundProps) => {
 		</group>
 	)
 }
-
-export default Ground

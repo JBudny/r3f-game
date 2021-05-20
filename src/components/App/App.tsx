@@ -2,9 +2,9 @@ import { Canvas } from '@react-three/fiber'
 import React from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
 
-import ErrorFallback from '../ErrorFallback/ErrorFallback'
+import { ErrorFallback } from '../ErrorFallback/ErrorFallback'
 
-const App: React.FC = () => {
+export const App: React.FC = () => {
 	return (
 		<ErrorBoundary FallbackComponent={ErrorFallback}>
 			<Canvas
@@ -20,5 +20,3 @@ const App: React.FC = () => {
 		</ErrorBoundary>
 	)
 }
-
-export default App

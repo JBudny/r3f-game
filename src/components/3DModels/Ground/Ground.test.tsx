@@ -6,7 +6,7 @@ import path from 'path'
 import React, { Suspense } from 'react'
 import { Color } from 'three'
 
-import Ground from './Ground'
+import { Ground } from './Ground'
 
 test('The ground mesh should change its color when the color prop is provided', async () => {
 	const absolutePath = path.resolve('src/blenderFiles/gltf/Ground/Ground.gltf')

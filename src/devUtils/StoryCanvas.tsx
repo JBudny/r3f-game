@@ -5,7 +5,7 @@ import React, { Suspense } from 'react'
 
 import { StoryCanvasProps } from './StoryCanvas.types'
 
-const StoryCanvas: React.FC<StoryCanvasProps> = ({
+export const StoryCanvas: React.FC<StoryCanvasProps> = ({
 	children
 }: StoryCanvasProps) => {
 	return (
@@ -25,5 +25,3 @@ const StoryCanvas: React.FC<StoryCanvasProps> = ({
 		</Canvas>
 	)
 }
-
-export default StoryCanvas

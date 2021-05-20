@@ -1,9 +1,9 @@
 import React from 'react'
 
-import H1 from '../primitives/Headers.styles'
+import { H1 } from '../primitives/Headers.styles'
 import { ErrorType } from './ErrorFallback.types'
 
-const ErrorFallback: React.FC<ErrorType> = ({ error }: ErrorType) => {
+export const ErrorFallback: React.FC<ErrorType> = ({ error }: ErrorType) => {
 	const { message } = error
 
 	return (
@@ -14,5 +14,3 @@ const ErrorFallback: React.FC<ErrorType> = ({ error }: ErrorType) => {
 		</div>
 	)
 }
-
-export default ErrorFallback

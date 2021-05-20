@@ -1,8 +1,8 @@
 import { useGLTF } from '@react-three/drei'
 
 import CharacterGLTF from '../../../blenderFiles/gltf/Character/Character.gltf'
-import { Character } from './Character'
+import { CharacterWrapper } from './CharacterWrapper'
 
-export const CharacterWithPreload = Character
+export const CharacterWithPreload = CharacterWrapper
 
 useGLTF.preload(CharacterGLTF)

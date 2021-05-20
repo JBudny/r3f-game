@@ -1,41 +1,15 @@
-import { useAnimations, useGLTF } from '@react-three/drei'
-import { useFrame } from '@react-three/fiber'
+import { useGLTF } from '@react-three/drei'
 import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 
-import CharacterGLTF from '../../../blenderFiles/gltf/Character/Character.gltf'
-import { useStore } from '../../../zustand/store'
-import {
-	CharacterActionName,
-	CharacterGLTFResult,
-	CharacterProps,
-	GLTFActions
-} from './Character.types'
+import { useCharacterStore } from '../../../zustand/characterStore'
+import { CharacterProps } from './Character.types'
 
 export const Character: React.FC<CharacterProps> = (props: CharacterProps) => {
 	const group = useRef<THREE.Group>()
-	const { nodes, materials, animations } = useGLTF(
-		CharacterGLTF
-	) as CharacterGLTFResult
-	const { actions } = useAnimations<GLTFActions>(animations, group)
-	const animationRef = useRef(useStore.getState().animation)
-
-	useEffect(() =>
-		useStore.subscribe(
-			(animation: CharacterActionName) => {
-				animationRef.current = animation
-
-				return null
-			},
-			(state) => state.animation
-		)
-	)
-
-	useEffect(() => {
-		const { current: animation } = animationRef
-
-		if (actions[animation]) actions[animation].play()
-	})
+	const setGroupRef = useCharacterStore((state) => state.setGroupRef)
+	const { nodes, materials } = props
+	setGroupRef(group)
 
 	return (
 		<group ref={group} {...props} dispose={null}>

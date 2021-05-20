@@ -21,7 +21,8 @@ jobs:
           yarn build
           yarn lint
           yarn lintStyles
-          yarn test
+          yarn lint-staged
+          yarn testOnce
 
         env:
           DEFAULT_BRANCH: main

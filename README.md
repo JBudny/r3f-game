@@ -1,5 +1,5 @@
 # R3f-game
-A browser game written in [@react-three/fiber](https://github.com/pmndrs/react-three-fiber).
+A browser game written with [@react-three/fiber](https://github.com/pmndrs/react-three-fiber).
 
 ### How to run
 These instructions will get you a copy of the project up and running on your local machine.

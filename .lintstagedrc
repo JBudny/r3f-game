@@ -1,6 +1,6 @@
 {
   "./src/**/*.ts{,x}": [
-    "eslint",
-    "pretty-quick --staged"
+    "pretty-quick --staged",
+    "eslint"
   ]
 }

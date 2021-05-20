@@ -34,7 +34,8 @@
     "lintStyles": "yarn stylelint \"src/**/*.styles.ts{,x}\"",
     "testOnce": "yarn test --watchAll=false --bail",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "prepare": "husky install"
   },
   "browserslist": {
     "production": [

@@ -1,8 +1,8 @@
 import { Meta, Story } from '@storybook/react'
 import React from 'react'
 
-import Ground from '../components/3DModels/Ground/Ground'
 import { GroundProps } from '../components/3DModels/Ground/Ground.types'
+import Ground from '../components/3DModels/Ground/GroundWithPreload'
 import StoryCanvas from '../devUtils/StoryCanvas'
 
 export default {

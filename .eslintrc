@@ -62,7 +62,9 @@
 		"no-unreachable": "error",
 		"react/jsx-props-no-spreading": "off",
 		"react/prop-types": "off",
-		"react/require-default-props": "off"
+		"react/require-default-props": "off",
+		"import/prefer-default-export": "off",
+		"import/no-default-export": "error"
 	},
 	"overrides": [
 		{
@@ -70,15 +72,8 @@
 				"**/*.stories.*"
 			],
 			"rules": {
-				"import/no-anonymous-default-export": "off"
-			}
-		},
-		{
-			"files": [
-				"**/*.stories.*"
-			],
-			"rules": {
-				"import/no-anonymous-default-export": "off"
+				"import/no-anonymous-default-export": "off",
+				"import/no-default-export": "off"
 			}
 		},
 		{

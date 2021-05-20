@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react'
 import React from 'react'
 
-import ErrorFallback from '../components/ErrorFallback/ErrorFallback'
+import { ErrorFallback } from '../components/ErrorFallback/ErrorFallback'
 import { ErrorType } from '../components/ErrorFallback/ErrorFallback.types'
 
 export default {

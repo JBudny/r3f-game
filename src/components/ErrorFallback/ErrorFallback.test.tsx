@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import React from 'react'
 
-import ErrorFallback from './ErrorFallback'
+import { ErrorFallback } from './ErrorFallback'
 
 test('ErrorFallback should display error header', () => {
 	const error = new Error('test error')

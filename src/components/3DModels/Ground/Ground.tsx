@@ -26,5 +26,3 @@ const Ground: React.FC<GroundProps> = ({ color, ...props }: GroundProps) => {
 }
 
 export default Ground
-
-useGLTF.preload(GroundGLTF)

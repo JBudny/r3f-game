@@ -12,20 +12,17 @@ const Ground: React.FC<GroundProps> = ({ color, ...props }: GroundProps) => {
 
 	return (
 		<group ref={group} {...props} dispose={null}>
-			<group name="Scene">
-				<mesh
-					name="Ground"
-					castShadow
-					receiveShadow
-					geometry={nodes.Ground.geometry}
-					material={materials.GroundMaterial}
-					scale={[10, 10, 10]}
-				/>
-			</group>
+			<mesh
+				name="Ground"
+				castShadow
+				receiveShadow
+				geometry={nodes.Ground.geometry}
+				material={materials.GroundMaterial}
+				position={[0, 0.2, 0]}
+				scale={[10, 10, 10]}
+			/>
 		</group>
 	)
 }
 
 export default Ground
-
-useGLTF.preload(GroundGLTF)

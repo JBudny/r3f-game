@@ -1,7 +1,7 @@
 import { OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Perf } from 'r3f-perf'
-import React from 'react'
+import React, { Suspense } from 'react'
 
 import { StoryCanvasProps } from './StoryCanvas.types'
 
@@ -21,7 +21,7 @@ const StoryCanvas: React.FC<StoryCanvasProps> = ({
 			<color attach="background" args={['#F8F8F8']} />
 			<ambientLight intensity={1} />
 			<directionalLight castShadow intensity={2} />
-			{children}
+			<Suspense fallback={null}>{children}</Suspense>
 		</Canvas>
 	)
 }

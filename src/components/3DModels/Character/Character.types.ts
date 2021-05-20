@@ -36,6 +36,6 @@ export type CharacterGLTFResult = GLTF & {
 
 export type CharacterProps = JSX.IntrinsicElements['group']
 
-type ActionName = '0TPose' | 'Idle' | 'Run'
+export type CharacterActionName = '0TPose' | 'Idle' | 'Run'
 
-export type GLTFActions = Record<ActionName, THREE.AnimationAction>
+export type GLTFActions = Record<CharacterActionName, THREE.AnimationAction>

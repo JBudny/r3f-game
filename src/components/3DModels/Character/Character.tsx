@@ -1,9 +1,12 @@
 import { useAnimations, useGLTF } from '@react-three/drei'
-import React, { useRef } from 'react'
+import { useFrame } from '@react-three/fiber'
+import React, { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 
 import CharacterGLTF from '../../../blenderFiles/gltf/Character/Character.gltf'
+import { useStore } from '../../../zustand/store'
 import {
+	CharacterActionName,
 	CharacterGLTFResult,
 	CharacterProps,
 	GLTFActions
@@ -15,6 +18,24 @@ export const Character: React.FC<CharacterProps> = (props: CharacterProps) => {
 		CharacterGLTF
 	) as CharacterGLTFResult
 	const { actions } = useAnimations<GLTFActions>(animations, group)
+	const animationRef = useRef(useStore.getState().animation)
+
+	useEffect(() =>
+		useStore.subscribe(
+			(animation: CharacterActionName) => {
+				animationRef.current = animation
+
+				return null
+			},
+			(state) => state.animation
+		)
+	)
+
+	useEffect(() => {
+		const { current: animation } = animationRef
+
+		if (actions[animation]) actions[animation].play()
+	})
 
 	return (
 		<group ref={group} {...props} dispose={null}>
